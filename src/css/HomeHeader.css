@@ -22,7 +22,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /*text-shadow: none;*/
+    text-shadow: none;
     font-weight: 400!important;
     z-index:5;
 }
