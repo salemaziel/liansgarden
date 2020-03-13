@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
+
 import { theme } from '../styles/theme';
 
 import '../assets/sass/main.scss';

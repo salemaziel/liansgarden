@@ -3,13 +3,15 @@ import Scrollspy from 'react-scrollspy';
 import Scroll from '../Scroll';
 import { Link } from 'gatsby'
 
+import './sidebar.css'
+
 
 export default function Nav({ sections = [] }) {
   return (
     <nav id="nav">
       <ul>
         <li>
-        <Link to="/">
+        <Link to="/" className="NavItems">
         <span className="icon fa-home" />
           Home
         </Link>
@@ -22,7 +24,7 @@ export default function Nav({ sections = [] }) {
         </Link>
         </li>
 
-        <li>
+        <li >
         <Link to="/shop">
           <span className="icon fa-cart-plus " />
           Shop
