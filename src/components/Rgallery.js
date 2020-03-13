@@ -1,6 +1,8 @@
 import React from 'react'
 import '../css/rgallery.css'
 import fetch from 'cross-fetch'
+import ScrollToTop from 'react-router-scroll-top'
+
 
 class Rgallery extends React.Component {
 	constructor() {
@@ -81,8 +83,11 @@ class Rgallery extends React.Component {
 class ImageView extends React.Component {
 	render() {
 		return (
+			
 			<div className="imageview-wrapper fadeIn">
+				
 				<div className="imageview">
+				
 					<Image CSSClass="imageview-image"
 						src={this.props.src}
 						alt={this.props.name} />
@@ -95,8 +100,11 @@ class ImageView extends React.Component {
 							{this.props.tags.map(tag => <li>{tag}</li>)}
 						</ul>
 					</div>
+					
 			</div>
+			
 		</div>
+		
 		)
 	}
 }

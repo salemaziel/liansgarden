@@ -5,15 +5,8 @@
     border-width: 2px;
     border-radius: 10px;
     /*filter: saturate(0.9);*/
-    text-shadow: 
-         /*1px 0px 1px #121212, 0px 1px 1px #161616, 
-         2px 1px 1px #121212, 1px 2px 1px #161616,
-         3px 2px 3px #121212, 2px 3px 3px #161616,*/
-         4px 3px 3px #757575, 3px 4px 3px #5959;
-         /*5px 4px 4px #121212, 4px 5px 4px #161616,
-         6px 5px 5px #121212, 5px 6px 5px #161616,
-         7px 6px 6px #121212;*/
-     z-index: 2
+    text-shadow: 3px 3px 4px black;
+     z-index: 2;
 }
 
 

@@ -7,6 +7,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { theme } from '../styles/theme';
 
 import '../assets/sass/main.scss';
+import PageFooter from './PageFooter';
 
 class Layout extends Component {
   constructor(props) {
@@ -53,8 +54,8 @@ class Layout extends Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Eventually' },
-                { name: 'keywords', content: 'site, web' },
+                { name: 'description', content: "Lian Ariel's Art Gallery and Shop" },
+                { name: 'keywords', content: 'art, artwork, crystals, chakras, yoga' },
               ]}
             >
               <html lang="en" />
@@ -62,6 +63,7 @@ class Layout extends Component {
             <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
               {children}
             </div>
+            <PageFooter />
           </>
         )}
       />

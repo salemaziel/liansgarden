@@ -13,6 +13,8 @@ import pic7 from '../assets/images/pic07.jpg';
 import pic8 from '../assets/images/pic08.jpg';
 import Scroll from '../components/Scroll';
 
+import ScrollToTop from 'react-router-scroll-top'
+
 import HomeHeader from '../components/HomeHeader'
 
 //import Rgallery from '../components/Rgallery'
@@ -61,7 +63,7 @@ const IndexPage = () => (
       <section id="portfolio" className="two">
         <div className="container">
           <header>
-            <h2>Portfolio</h2>
+            <h2>I am Me :)</h2>
           </header>
 
           <p>
@@ -185,7 +187,6 @@ const IndexPage = () => (
       </section>
     </div>
 
-    <PageFooter />
   </Layout>
 );
 

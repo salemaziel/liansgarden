@@ -42,7 +42,6 @@ const Gallery = () => (
             </section>
         </div>
 
-        <PageFooter />
     </Layout>
 )
 

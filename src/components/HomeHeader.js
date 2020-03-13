@@ -11,16 +11,18 @@ class HomeHeader extends React.Component {
                             Hi! I'm <span className="rainbow">Lian</span>
                             <br />
                         </h2>
-                        <h3 className="alt">
+                        <h3 className="alt" style={{textShadow: '3px 3px 4px black',}}>
                             Yoga Teacher and Artist
                         </h3>    
                         <icon className="fa fa-hand-peace-o" 
                         style={{
                             fontSize: "2rem",
-                            padding: "0 0 1rem"
+                            padding: "0 0 1rem",
+                            textShadow: '3px 3px 5px black',
                         }} />
                         <p style={{
-                          letterSpacing: "1rem"
+                          letterSpacing: "1rem",
+                          textShadow: '3px 3px 3px black',
                         }}>Welcome</p>
                         
                 </header>

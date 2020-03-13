@@ -3,7 +3,9 @@ import Layout from '../components/Layout';
 import PageFooter from '../components/PageFooter';
 import SideBar from '../components/Sidebar/index'
 
-import pic8 from '../assets/images/pic08.jpg';
+import Pic8 from '../assets/images/pic08.jpg';
+import InstagramEmbed from 'react-instagram-embed';
+
 
 
 const About = () => (
@@ -16,11 +18,12 @@ const About = () => (
                     <header>
                         <h2>About Me</h2>
                     </header>
-
-                    <a href="#" className="image featured">
-                        <img src={pic8} alt="" />
+                    
+                  
+                    <a href="#" className="image featured" >
+                        <img src={Pic8} alt=""  />
                     </a>
-
+                    
                     <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -30,10 +33,24 @@ const About = () => (
                     qui officia deserunt mollit anim id est laborum.
 
                     </p>
+                    <div style={{display: 'flex', alignContent: 'center', alignItems: 'center', justifyContent: 'center'}} >
+                    <InstagramEmbed
+                    url='https://instagr.am/p/BckbiOsBek-/'
+                    maxWidth={320}
+                    hideCaption={false}
+                    containerTagName='div'
+                    protocol=''
+                    injectScript
+                    onLoading={() => {}}
+                    onSuccess={() => {}}
+                    onAfterRender={() => {}}
+                    onFailure={() => {}}
+                />
                 </div>
+                </div>
+                
             </section>
         </div>
-        <PageFooter />
     </Layout>
 )
 

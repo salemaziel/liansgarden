@@ -341,7 +341,10 @@
 		&.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 2em 0;
+			margin: 0 0 2rem;
+			align-items: center;
+			align-content: center;
+			justify-content: center;
 		}
 
 		&.left {
@@ -789,9 +792,8 @@
 
 			&.mygallery {
 				box-shadow: none;
-				
 				padding: 2rem 0 5rem;
-
+				overflow: visible;
 			}
 		}
 	}

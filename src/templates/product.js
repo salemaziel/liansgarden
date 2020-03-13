@@ -7,6 +7,8 @@ import styled from "styled-components"
 import SideBar from '../components/Sidebar/index'
 
 
+
+
 import Layout from "../components/Layout";
 
 const Heading = styled.h1`
@@ -35,26 +37,31 @@ const Dropdown = styled.select`
   display: block;
   padding: 10px;
   margin: 10px 0;
-  background: green;
+  background: whitesmoke;
   font-weight: 700;
-  border: none;
+  border: 2px;
+  border-width: 2px 2px 2px solid;
+  border-radius: 5px;
   outline: none;
+  color: purple;
 `
 const DropdownOption = styled.option`
   padding: 10px;
-  background: blue;
+  background: whitesmoke;
   font-weight: 700;
   border: none;
   outline: none;
+  color: purple;
 `
 
 const BuyButton = styled.button`
   padding: 20px;
-  background: green;
+  background: purple;
   font-weight: 700;
+  margin: 1rem 0 3rem;
 `
 
-class Item extends React.Component {
+class Product extends React.Component {
   state = {
     selected: this.props.data.markdownRemark.frontmatter.customField.values[0].name
   }
@@ -71,7 +78,7 @@ class Item extends React.Component {
     }).join('|')
   }
 
-   // calculate price based on option selected for display on item page
+   // calculate price based on option selected for display on product page
   updatePrice = (basePrice, values) => {
     const selectedOption = values.find(option => option.name === this.state.selected)
     return (basePrice + selectedOption.priceChange).toFixed(2)
@@ -79,7 +86,7 @@ class Item extends React.Component {
   }
 
   render() {
-    const item = this.props.data.markdownRemark
+    const product = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
@@ -91,31 +98,34 @@ class Item extends React.Component {
     <div id="main">
     
       <div className="container">
-        <Heading>{item.frontmatter.title}</Heading>
+        <Heading>{product.frontmatter.title}</Heading>
 
-        <ImgStyled fluid={item.frontmatter.image.childImageSharp.fluid} />
+        <ImgStyled fluid={product.frontmatter.image.childImageSharp.fluid} />
 
-        <Price>£{this.updatePrice(item.frontmatter.price, item.frontmatter.customField.values)}</Price>
-        <Description>{item.frontmatter.description}</Description>
+        <Price>${this.updatePrice(product.frontmatter.price, product.frontmatter.customField.values)}</Price>
+        <Description>{product.frontmatter.description}</Description>
         <Dropdown
-          id={item.frontmatter.customField.name}
+          id={product.frontmatter.customField.name}
           onChange={(e) => this.setSelected(e.target.value)}
           value={this.state.selected}>
-          {item.frontmatter.customField.values.map((option) => (<DropdownOption key={option.name}>{option.name}</DropdownOption>))}
+          {product.frontmatter.customField.values.map((option) => (<DropdownOption key={option.name}>{option.name}</DropdownOption>))}
+          
         </Dropdown>
 
         <BuyButton
           className='snipcart-add-item'
-          data-item-id={item.frontmatter.id}
-          data-item-price={item.frontmatter.price}
-          data-item-name={item.frontmatter.title}
-          data-item-description={item.frontmatter.description}
-          data-item-image={item.frontmatter.image.childImageSharp.fluid.src}
-          data-item-url={"https://gatsby-snipcart-starter.netlify.com" + item.fields.slug} //REPLACE WITH OWN URL
-          data-item-custom1-name={item.frontmatter.customField ? item.frontmatter.customField.name : null}
-          data-item-custom1-options={this.createString(item.frontmatter.customField.values)}
+          data-item-id={product.frontmatter.id}
+          data-item-price={product.frontmatter.price}
+          data-item-name={product.frontmatter.title}
+          data-item-description={product.frontmatter.description}
+          data-item-image={product.frontmatter.image.childImageSharp.fluid.src}
+          data-item-url={"https://gatsby-snipcart-starter.netlify.com" + product.fields.slug} //REPLACE WITH OWN URL
+          data-item-custom1-name={product.frontmatter.customField ? product.frontmatter.customField.name : null}
+          data-item-custom1-options={this.createString(product.frontmatter.customField.values)}
           data-item-custom1-value={this.state.selected}>
-          Add to basket
+          
+            <span className="icon fa-cart-plus" />
+            Add to basket
         </BuyButton>
         </div>
         
@@ -127,10 +137,10 @@ class Item extends React.Component {
   }
 }
 
-export default Item;
+export default Product;
 
 export const pageQuery = graphql`
-  query ItemBySlug($slug: String!) {
+  query ProductBySlug($slug: String!) {
     site {
       siteMetadata {
         title
