@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-prologue",
+  "name": "Lians Garden",
   "version": "0.0.1",
-  "description": "Gatsby.js V2 starter template based on Prologue by HTML5 UP",
+  "description": "Art Gallery and Shop for Lian Ariel",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-prologue.git"
+    "url": "git+https://github.com/salemaziel/liansgarden.git"
   },
   "author": {
     "name": "Anubhav Srivastava",
@@ -64,7 +64,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anubhavsrivastava/gatsby-starter-prologue/issues"
+    "url": "https://github.com/salemaziel/liansgarden"
   },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-prologue#readme"
+  "homepage": "https://liansgarden.com"
 }
