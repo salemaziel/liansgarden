@@ -1,13 +1,13 @@
 module.exports = {
   siteTitle: "Lian's Garden", // <title>
-  manifestName: 'Garden',
-  manifestShortName: 'Garden', // max 12 characters
+  manifestName: "Lian's Garden",
+  manifestShortName: "Lian's Garden", // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#663399',
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
-  manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/gatsby-starter-prologue/`, // This path is subpath of your hosting https://domain/portfolio
+  manifestIcon: 'src/assets/images/logo-150x132.png',
+  pathPrefix: `/content/shop`, // This path is subpath of your hosting https://domain/portfolio
   authorName: 'Lian Gordon',
   heading: 'Yoga Teacher & Artist',
   // social
@@ -15,17 +15,12 @@ module.exports = {
     {
       icon: 'fa-instagram',
       name: 'Instagram',
-      url: 'https://instagram.com',
-    },
-    {
-      icon: 'fa-twitter',
-      name: 'Twitter',
-      url: 'https://twitter.com/onlyanubhav',
+      url: 'https://instagram.com/lianariel',
     },
     {
       icon: 'fa-facebook',
       name: 'Facebook',
-      url: 'https://facebook.com/theanubhav',
+      url: 'https://facebook.com',
     },
     {
       icon: 'fa-envelope-o',
